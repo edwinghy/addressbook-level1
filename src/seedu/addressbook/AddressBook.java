@@ -830,8 +830,8 @@ public class AddressBook {
      *
      * @param person whose name you want
      */
-    private static String getNameFromPerson(String[] person) {
-        return person[PERSON_DATA_INDEX_NAME];
+    private static String getNameFromPerson(HashMap<String,String> person) {
+        return person.get(PERSON_PROPERTY_NAME);
     }
 
     /**
@@ -839,8 +839,8 @@ public class AddressBook {
      *
      * @param person whose phone number you want
      */
-    private static String getPhoneFromPerson(String[] person) {
-        return person[PERSON_DATA_INDEX_PHONE];
+    private static String getPhoneFromPerson(HashMap<String,String> person) {
+        return person.get(PERSON_PROPERTY_PHONE);
     }
 
     /**
@@ -848,8 +848,8 @@ public class AddressBook {
      *
      * @param person whose email you want
      */
-    private static String getEmailFromPerson(String[] person) {
-        return person[PERSON_DATA_INDEX_EMAIL];
+    private static String getEmailFromPerson(HashMap<String,String> person) {
+        return person.get(PERSON_PROPERTY_EMAIL);
     }
 
     /**
