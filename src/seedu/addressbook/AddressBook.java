@@ -14,14 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 /*
  * NOTE : =============================================================
@@ -1027,10 +1020,10 @@ public class AddressBook {
      *
      * @param person String array representing the person (used in internal data)
      */
-    private static boolean isPersonDataValid(String[] person) {
-        return isPersonNameValid(person[PERSON_DATA_INDEX_NAME])
-                && isPersonPhoneValid(person[PERSON_DATA_INDEX_PHONE])
-                && isPersonEmailValid(person[PERSON_DATA_INDEX_EMAIL]);
+    private static boolean isPersonDataValid(HashMap<String,String> person) {
+        return isPersonNameValid(person.get(PERSON_PROPERTY_NAME))
+                && isPersonPhoneValid(person.get(PERSON_PROPERTY_PHONE))
+                && isPersonEmailValid(person.get(PERSON_PROPERTY_EMAIL));
     }
 
     /*
