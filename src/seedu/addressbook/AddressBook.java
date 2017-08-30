@@ -7,8 +7,6 @@ package seedu.addressbook;
  * ====================================================================
  */
 
-import com.sun.org.apache.xpath.internal.axes.HasPositionalPredChecker;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -39,7 +37,7 @@ public class AddressBook {
     /**
      * Version info of the program.
      */
-    private static final String VERSION = "AddessBook Level 1 - Version 1.0";
+    private static final String VERSION = "AddessBook Level 1 - Version 1.0.1";
 
     /**
      * A decorative prefix added to the beginning of lines printed by AddressBook
@@ -138,11 +136,6 @@ public class AddressBook {
     private static final String PERSON_PROPERTY_NAME = "name";
     private static final String PERSON_PROPERTY_PHONE = "phone";
     private static final String PERSON_PROPERTY_EMAIL = "email";
-
-    /**
-     * The number of data elements for a single person.
-     */
-    private static final int PERSON_DATA_COUNT = 3;
 
     /**
      * Offset required to convert between 1-indexing and 0-indexing.COMMAND_
