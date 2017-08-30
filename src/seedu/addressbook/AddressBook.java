@@ -907,12 +907,12 @@ public class AddressBook {
      * @return if cannot decode: empty Optional
      *         else: Optional containing decoded person
      */
-    private static Optional<String[]> decodePersonFromString(String encoded) {
+    private static Optional<HashMap<String,String>> decodePersonFromString(String encoded) {
         // check that we can extract the parts of a person from the encoded string
         if (!isPersonDataExtractableFrom(encoded)) {
             return Optional.empty();
         }
-        final String[] decodedPerson = makePersonFromData(
+        final HashMap<String,String> decodedPerson = makePersonFromData(
                 extractNameFromPersonString(encoded),
                 extractPhoneFromPersonString(encoded),
                 extractEmailFromPersonString(encoded)
@@ -1018,7 +1018,7 @@ public class AddressBook {
     /**
      * Returns true if the given person's data fields are valid
      *
-     * @param person String array representing the person (used in internal data)
+     * @param person HashMap representing the person (used in internal data)
      */
     private static boolean isPersonDataValid(HashMap<String,String> person) {
         return isPersonNameValid(person.get(PERSON_PROPERTY_NAME))
